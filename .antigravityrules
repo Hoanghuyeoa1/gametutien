@@ -1,0 +1,51 @@
+# ANTIGRAVITY PROJECT RULES: GAMETUTIEN
+# Định vị: Web Game Tu Tiên (Next.js 16 App Router, React 19, TypeScript 5, Tailwind CSS v4)
+
+---
+
+## 1. TỐI ƯU HÓA TOKEN VÀ PHẠM VI NGỮ CẢNH (TOKEN ECONOMY)
+- **Ưu tiên ripgrep MCP:** Luôn dùng `ripgrep` MCP để định vị chuỗi, tên biến, hook hoặc chữ ký hàm trước khi đọc file.
+- **Chặn đọc toàn bộ file dài:** Tuyệt đối KHÔNG đọc toàn bộ file dài trên 100 dòng bằng lệnh đọc file đầy đủ. Hãy xác định dòng bằng ripgrep rồi đọc khoanh vùng cụ thể (line ranges / offset).
+- **Phản hồi súc tích:** Đi thẳng vào code chỉnh sửa và giải thích ngắn gọn nguyên nhân/giải pháp; không in lại code của các file không thay đổi để tránh lãng phí context window.
+
+---
+
+## 2. BẤT BIẾN NGHIỆP VỤ & CẢNH BÁO BẪY LOGIC (GAME CORE INVARIANTS)
+
+### 2.1. Cảnh Giới & Biên Dữ Liệu (Realms)
+- **Hệ thống 105 Cảnh Giới:** Index chạy từ `0` (Phàm Nhân) đến `104` (Đế Tổ Đỉnh Phong).
+- **Cấm Magic Numbers:** Tuyệt đối KHÔNG hardcode số `99` hoặc `100` khi kẹp biên cảnh giới. Luôn dùng cận động `realmsData.length - 1`.
+- **Bẫy Ép Kiểu (Type Coercion Trap):** Trường `currentRealm` PHẢI luôn là kiểu `number` thuần túy. Trước khi tính toán cộng trừ (`+ 1`), luôn bọc qua `Number(...)` hoặc `Math.floor(...)` để ngăn chặn triệt để lỗi nối chuỗi `"14" + 1 = "141"`.
+- **Tính Đơn Điệu:** Dữ liệu tu vi yêu cầu (`tuViRequired`) trong `data/realms-data.json` phải tăng đơn điệu nghiêm ngặt ($TuVi_{i} > TuVi_{i-1}$) và `realms[i].id === i`.
+
+### 2.2. Lưu Trữ & Tự Phục Hồi (Save Engine & Self-Healing)
+- **Storage Key:** Khóa chuẩn hiện tại là `tutien_tam_gioi_save_v7`.
+- **Nguyên tắc Migration:** Khi nâng cấp save từ bản cũ (v1-v6 lên v7), tuyệt đối không xóa trắng dữ liệu người chơi.
+- **Khử Spam Repair:** Hàm `repairCorruptedSaveData()` chỉ được phép chạy một lần duy nhất lúc nạp save khởi đầu (load game), không lồng vào vòng lặp state update để tránh spam console log.
+
+### 2.3. Triết Lý Zero-Asset
+- **Hình ảnh / Hoạt họa:** 100% SVG thuần vector + CSS Keyframes (thư mục `components/realm/`). Không import ảnh bitmap (PNG/JPG) hay GIF ngoài để bảo toàn độ nét và tốc độ tải.
+- **Âm thanh:** 100% procedural synthesis qua Web Audio API (`lib/audio-engine.ts`), không phụ thuộc file audio MP3/WAV ngoài.
+
+---
+
+## 3. CHUẨN MỰC KIẾN TRÚC MÃ NGUỒN (CODEBASE ARCHITECTURE)
+
+### 3.1. Phân Tách Trách Nhiệm (Separation of Concerns)
+- **`components/GameDashboard.tsx` là Orchestrator:** Giữ component này dưới 900 dòng. Không nhúng modal inline hoặc logic tính toán cồng kềnh vào đây.
+- **Modals:** Toàn bộ popup/modal phải nằm độc lập trong `components/modals/`, định nghĩa TypeScript Props rõ ràng và export qua `components/modals/index.ts`.
+- **Custom Hooks:** Toàn bộ business logic, API calls, timer, storage handlers phải được đóng gói thành domain hooks trong `hooks/` (ví dụ: `useGameSave`, `useAchievements`, `useGameActions`,...).
+- **Định Nghĩa Kiểu Dữ Liệu:** Toàn bộ interface/type phải đặt tại `lib/types.ts`. Tuyệt đối không dùng kiểu `any`.
+
+### 3.2. API Handlers
+- Các Route Handlers (`app/api/`) chỉ xử lý logic tính toán, thẩm định tài nguyên (server-side validation) và trả về payload kết quả chuẩn hóa cùng `player` cập nhật.
+
+---
+
+## 4. QUY TRÌNH KIỂM THỬ VÀ ĐỒNG BỘ TÀI LIỆU (WORKFLOW)
+
+Mỗi khi hoàn thành một nhiệm vụ hoặc refactor code:
+1. **Kiểm tra TypeScript:** Chạy lệnh `npx tsc --noEmit` và bảo đảm đạt 0 lỗi (Exit code 0).
+2. **Kiểm tra Build:** Chạy lệnh `npm run build` để kiểm tra khả năng biên dịch thành công.
+3. **Cập nhật `CHANGELOG.md`:** Thêm mục mới lên đầu file ghi rõ mục đích, danh sách file thay đổi, chi tiết kỹ thuật và kết quả kiểm thử.
+4. **Cập nhật `report.md`:** Cập nhật living specs nếu có thay đổi về kiến trúc, data model hoặc ma trận tính năng (tuyệt đối không ghi log chi tiết vào `report.md`).

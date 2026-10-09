@@ -1,0 +1,101 @@
+Nhìn vào giao diện hiện tại của bảng **Đột Phá Cảnh Giới** trong ảnh, có thể thấy 2 vấn đề lớn:
+
+1. **Về mặt UI:** Khoảng trống đen ở giữa quá lớn, thông tin chỉ vỏn vẹn 3 dòng chữ đơn điệu và 1 nút bấm, chưa tạo được cảm giác trang trọng, huyền bí của thời khắc "chuyển mình thành rồng" trong tu tiên.
+2. **Về mặt Gameplay:** Việc đột phá mới chỉ là "đủ Tu Vi + đủ Linh Thạch $\rightarrow$ bấm nút cầu may", chưa liên kết với các phân hệ sâu sắc mà bạn đã xây dựng (như **Đan Độc**, **Độ Tinh Khiết Chân Nguyên**, **Đạo Lữ**, **Động Phủ**, **Đan Dược Phá Cảnh**).
+
+Dưới đây là **5 ý tưởng nâng cấp toàn diện** để biến khâu Đột Phá thành khoảnh khắc kịch tính, chiến lược và đáng nhớ nhất trong game:
+
+---
+
+### 1. Khảm Nạp Đan Dược Phá Cảnh & Trận Bàn (Breakthrough Catalysts)
+
+Tận dụng ngay khoảng trống ở giữa để đặt **2 - 3 Slot Khảm Nạp Hộ Trợ**:
+
+* **Slot Đan Dược:** Đặt các loại đan dược phá cảnh (*Trúc Cơ Đan, Phá Cảnh Đan, Ngưng Thần Đan*):
+* Tăng thẳng tỷ lệ thành công (ví dụ: $+10\%$ đến $+40\%$).
+* Nếu dùng **Đan 9 Văn (Cửu Khổng)**: Tăng $100\%$ tỷ lệ thành công và miễn nhiễm hoàn toàn phản phệ nếu xui xẻo thất bại.
+
+
+* **Slot Trận Bàn / Linh Phù:** Tiêu hao *Tụ Linh Trận Bàn* hoặc *Hộ Mạch Phù* để giảm tiêu hao Linh Thạch hoặc bảo vệ kinh mạch không bị rạn nứt.
+
+---
+
+### 2. Tác Động Của Đan Độc & Tâm Ma Phản Phệ (Inner Demon & Toxicity)
+
+Liên kết trực tiếp với hệ thống **Tam Hóa Chi Cảnh** và **Đan Độc** đã có:
+
+* **Ảnh hưởng của Đan Độc (`pillToxicity`):**
+* Đan Độc $< 10\%$: Căn cơ vững chắc, tỷ lệ đột phá cộng thêm $+10\%$.
+* Đan Độc $> 40\%$: Kinh mạch tắc nghẽn, tỷ lệ đột phá bị trừ nặng $-20\%$ đến $-40\%$, xuất hiện cảnh báo **"Nguy cơ Tẩu Hỏa Nhập Ma!"**.
+
+
+* **Cơ chế Thất Bại (Phản Phệ):**
+* Hiện tại nếu thất bại chỉ mất tu vi. Hãy bổ sung: thất bại khi đan độc cao sẽ bị **Trọng Thương** (giảm 50% HP, phải dùng đan trị thương hoặc bế quan dưỡng thương) hoặc sinh ra **Bình Cảnh (Bottleneck)** cần tìm kỳ ngộ để hóa giải.
+
+
+
+---
+
+### 3. Phân Cấp Phẩm Vị Đạo Cơ (Dành Riêng Cho Đại Cảnh Giới)
+
+Khi đột phá các mốc lớn (Luyện Khí $\rightarrow$ Trúc Cơ, Trúc Cơ $\rightarrow$ Kim Đan, Kim Đan $\rightarrow$ Nguyên Anh...), không nên chỉ tăng chỉ số thông thường mà cho phép người chơi chọn **Phẩm Cấp Đột Phá**:
+
+* **Hạ Phẩm Đạo Cơ (Phàm Phẩm):** Yêu cầu tài nguyên thấp, dễ đột phá, nhưng chỉ số cộng thêm cơ bản.
+* **Địa Phẩm Đạo Cơ:** Cần đan dược trung phẩm, chỉ số cộng thêm $+30\%$.
+* **Thiên Đạo Trúc Cơ / Cửu Chuyển Kim Đan (Cực Phẩm):**
+* Yêu cầu khắt khe: Đan Độc $= 0$, Chân Nguyên tinh khiết $100\%$, cần đan dược cực phẩm hoặc thiên địa linh vật.
+* Đột phá thành công: Kích hoạt **Dị Tượng Thiên Địa**, mở khóa một **Thiên Phú Ẩn Độc Bản** (ví dụ: tăng vĩnh viễn $10\%$ Kháng Tất Cả Sát Thương hoặc Tốc độ hồi phục Chân Nguyên).
+
+
+-------------------------------------------------------------------------------------------
+---
+
+### 4. Đạo Lữ Hộ Pháp & Linh Khí Động Phủ
+
+Khai thác mạng lưới quan hệ và tài sản của nhân vật:
+
+* **Chọn 1 Đạo Lữ Hộ Pháp:**
+* Đạo Lữ có cảnh giới cao hơn sẽ giúp tăng tỷ lệ thành công $+5\% - 15\%$.
+* Khi người chơi gặp nguy hiểm (sắp tẩu hỏa nhập ma), Đạo Lữ sẽ xuất thủ đỡ đòn phản phệ giúp người chơi, tăng điểm Hảo Cảm sâu sắc.
+
+
+* **Linh Khí Động Phủ:** Nồng độ linh khí tại Động Phủ càng cao thì số Linh Thạch tiêu hao khi đột phá càng giảm.
+
+---
+
+### 5. Bảng Dự Toán Thực Lực (Before & After Preview)
+
+Lấp đầy khoảng trống ở giữa bằng bảng so sánh trực quan chỉ số trước và sau khi đột phá để kích thích dopamine của người chơi:
+
+* **Thọ Nguyên:** $100 \rightarrow \mathbf{200\ Năm}$ (Tăng tuổi thọ tối đa).
+* **Công Kích / Phòng Ngự / Khí Huyết:** Hiển thị mũi tên xanh tăng vọt (ví dụ: $\text{ATK: } 450 \rightarrow \mathbf{1,200\ (+166\%)}$).
+* **Mở Khóa Tính Năng Mới:** Nhắc nhở người chơi cảnh giới tiếp theo sẽ mở khóa phân hệ gì (ví dụ: Trúc Cơ mở khóa *Ngự Kiếm Phi Hành*, Kim Đan mở khóa *Bản Mệnh Pháp Bảo*).
+
+---
+
+### 📐 Phác Thảo Lại Bố Cục Giao Diện (Wireframe Gợi Ý)
+
+```text
+┌──────────────────────────────────────────────────────────────┐
+│  ✨ ĐỘT PHÁ CẢNH GIỚI                                        │
+│  Mục tiêu: 🔥 Luyện Khí Tầng 1 ➔ Luyện Khí Tầng 2             │
+├──────────────────────────────────────────────────────────────┤
+│  [ DỰ TOÁN THỰC LỰC ]                                        │
+│  • Khí Huyết: 1,200 ➔ 1,850 (+650)   • Thọ Nguyên: +10 Năm   │
+│  • Công Kích:   180 ➔   260 (+80)    • Tốc Độ:     +5%       │
+├──────────────────────────────────────────────────────────────┤
+│  [ CĂN CƠ & HỘ TRỢ ]                                         │
+│  • Đan Độc: 0% [Thuần Khiết +10% Tỉ Lệ]                      │
+│  • [ Ô Khảm Đan Dược: + Phá Cảnh Đan ] (Tăng +20% Tỉ lệ)     │
+│  • [ Ô Khảm Đạo Lữ:   + Bạch Tố Nhi ]  (Giảm rủi ro tẩu hỏa) │
+├──────────────────────────────────────────────────────────────┤
+│  Yêu cầu Tu vi:     14,067 / 100       [ĐỦ] (Xanh)           │
+│  Yêu cầu Linh thạch: 179k / 30         [ĐỦ] (Xanh)           │
+│  Tỉ lệ thành công:  90% + 10% (Căn Cơ) = 100% (Hoàng Kim)    │
+├──────────────────────────────────────────────────────────────┤
+│               [ ✨ BẮT ĐẦU ĐỘT PHÁ CẢNH GIỚI! ]              │
+└──────────────────────────────────────────────────────────────┘
+
+```
+
+Bạn thấy hướng tiếp cận nào hấp dẫn nhất? Tôi có thể lên ngay **bản prompt kỹ thuật chi tiết (Execute-to-Completion)** cho hệ thống **Slot Đan Dược Hộ Mệnh + Bảng Dự Toán Thực Lực + Căn Cơ Đan Độc** để tối ưu hóa ngay giao diện này!

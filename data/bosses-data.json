@@ -1,0 +1,711 @@
+[
+  {
+    "id": "hoang_da_lang_vuong",
+    "name": "Hoang Dã Lang Vương",
+    "description": "Thú vương của bầy sói hung bạo bìa rừng Thanh Vân. Nanh nhọn như đao cạo, mắt đỏ ngầu khát máu.",
+    "realm": 0,
+    "difficulty": "easy",
+    "stats": {
+      "power": 4920,
+      "defense": 3198,
+      "speed": 3690
+    },
+    "rewards": {
+      "tuVi": 250,
+      "linhThach": 150,
+      "danhVong": 20,
+      "specialItems": [
+        "Lang Vương Nanh Nhọn",
+        "Lang Bì Hộ Uyển"
+      ]
+    },
+    "defeatText": "Lang Vương tru lên thảm thiết rồi gục ngã dưới chân ngươi. Bìa rừng tạm thời yên bình!",
+    "loseText": "Bầy sói vây công quá hung hãn, ngươi chật vật thoát chết trở về động phủ..."
+  },
+  {
+    "id": "thiet_quyen_dao_tac",
+    "name": "Thiết Quyền Thảo Khấu Đầu Mục",
+    "description": "Tên ác bá chiếm cứ sơn lĩnh phàm trần, luyện quyền pháp ngạnh công mình đồng da sắt.",
+    "realm": 0,
+    "difficulty": "medium",
+    "stats": {
+      "power": 5520,
+      "defense": 3588,
+      "speed": 4140
+    },
+    "rewards": {
+      "tuVi": 450,
+      "linhThach": 300,
+      "danhVong": 40,
+      "specialItems": [
+        "Thiết Toái Quyền Phổ",
+        "Bách Luyện Huyền Thiết"
+      ]
+    },
+    "defeatText": "\"Đại hiệp tha mạng! Ta không dám cướp bóc nữa!\" Tên đầu mục dập đầu dâng ngân lượng.",
+    "loseText": "Một quyền của hắn chấn nát phòng ngự, ngươi bị đánh bay phải rút lui điều tức..."
+  },
+  {
+    "id": "u_am_man_xa",
+    "name": "U Ám Độc Mãng",
+    "description": "Cự xà ẩn nấp dưới đáy đầm lầy, phun nọc độc ăn mòn da thịt phàm nhân trong chớp mắt.",
+    "realm": 0,
+    "difficulty": "hard",
+    "stats": {
+      "power": 6600,
+      "defense": 4290,
+      "speed": 4950
+    },
+    "rewards": {
+      "tuVi": 800,
+      "linhThach": 500,
+      "danhVong": 70,
+      "specialItems": [
+        "Độc Mãng Mật Nang",
+        "Hắc Xà Giáp"
+      ]
+    },
+    "defeatText": "Mãng xà quằn quại rồi tắt thở. Ngươi mổ bụng nó thu hoạch được túi mật xà quý giá!",
+    "loseText": "Hơi độc bốc lên mờ mịt làm ngươi choáng váng, đành phải vận công bức độc chạy thoát..."
+  },
+  {
+    "id": "hac_phong_trai_chu",
+    "name": "Hắc Phong Trại Chủ - Độc Nhãn Hổ",
+    "description": "Thủ lĩnh thảo khấu lén học được thổ nạp sơ cấp, tự phong bá vương một cõi Luyện Khí.",
+    "realm": 3,
+    "difficulty": "easy",
+    "stats": {
+      "power": 5320,
+      "defense": 3458,
+      "speed": 3990
+    },
+    "rewards": {
+      "tuVi": 1500,
+      "linhThach": 1000,
+      "danhVong": 100,
+      "specialItems": [
+        "Phá Sơn Cửu Hoàn Đao",
+        "Tàng Bảo Đồ Thảo Khấu"
+      ]
+    },
+    "defeatText": "Trại chủ vứt đao quỳ rạp: \"Tiên trưởng tha mạng, toàn bộ bảo khố trại xin dâng ngài!\"",
+    "loseText": "Đao pháp hung mãnh của hắn chém rách đạo bào ngươi, ngươi đành lui bước bảo toàn tính mạng..."
+  },
+  {
+    "id": "bach_xa_yeu_thu",
+    "name": "U Cốc Bạch Xà Yêu",
+    "description": "Mãng xà hấp thụ linh khí sơn động hóa yêu, toàn thân vảy trắng như ngọc, nọc độc băng hàn.",
+    "realm": 5,
+    "difficulty": "medium",
+    "stats": {
+      "power": 8410,
+      "defense": 5466,
+      "speed": 6307
+    },
+    "rewards": {
+      "tuVi": 3500,
+      "linhThach": 2500,
+      "danhVong": 180,
+      "specialItems": [
+        "Bạch Xà Nội Đan",
+        "Băng Tàm Xà Lân Giáp"
+      ]
+    },
+    "defeatText": "Bạch Xà rít lên chói tai rồi hóa thành làn khói trắng tan biến, để lại viên nội đan sáng ngời!",
+    "loseText": "Hàn độc ngấm sâu vào kinh mạch khiến tay chân đông cứng, ngươi phải rút về động phủ giải độc..."
+  },
+  {
+    "id": "luyen_khi_ta_tu",
+    "name": "Huyết Sát Môn Tàn Đồ",
+    "description": "Đệ tử phản tông tà phái, chuyên đồ sát tán tu để luyện chế Huyết Hồn Phiên.",
+    "realm": 6,
+    "difficulty": "hard",
+    "stats": {
+      "power": 12400,
+      "defense": 8060,
+      "speed": 9300
+    },
+    "rewards": {
+      "tuVi": 6500,
+      "linhThach": 4500,
+      "danhVong": 300,
+      "specialItems": [
+        "Huyết Hồn Ma Phiên",
+        "Huyết Luyện Đại Pháp Sơ Thiên"
+      ]
+    },
+    "defeatText": "Tà tu hét lên thảm thiết khi ma phiên bị ngươi chém vỡ nát: \"Sư tôn ta sẽ không tha cho ngươi...\"",
+    "loseText": "Huyết sát khí quá dày đặc bức ngươi ngạt thở, ngươi trúng một chưởng trọng thương bỏ chạy..."
+  },
+  {
+    "id": "thiet_bi_vien_vuong",
+    "name": "Thiết Bí Cự Viên",
+    "description": "Linh thú Trúc Cơ cảnh trấn giữ vách đá Linh Hầu Phong, tay cứng như huyền thiết.",
+    "realm": 8,
+    "difficulty": "medium",
+    "stats": {
+      "power": 16200,
+      "defense": 10530,
+      "speed": 12150
+    },
+    "rewards": {
+      "tuVi": 12000,
+      "linhThach": 8000,
+      "danhVong": 450,
+      "specialItems": [
+        "Thiết Cốt Viên Tủy",
+        "Hầu Nhi Tửu Thượng Hạng"
+      ]
+    },
+    "defeatText": "Cự Viên chấn động lùi bước, cúi đầu thần phục nhường lối vào hang động đầy rượu vượn quý!",
+    "loseText": "Cự lực vạn cân hất tung ngươi bay xa trăm trượng, kinh mạch chấn động dữ dội..."
+  },
+  {
+    "id": "quy_am_lao_ba",
+    "name": "Quỷ Âm Lão Mẫu",
+    "description": "Tà tu ẩn cư U Cốc luyện Khô Lâu Trượng, tiếng sáo ma quái mê hoặc tâm thần tu sĩ Trúc Cơ.",
+    "realm": 10,
+    "difficulty": "hard",
+    "stats": {
+      "power": 29500,
+      "defense": 19175,
+      "speed": 22125
+    },
+    "rewards": {
+      "tuVi": 22000,
+      "linhThach": 15000,
+      "danhVong": 650,
+      "specialItems": [
+        "U Minh Ma Địch",
+        "Nhiếp Hồn Linh Đan"
+      ]
+    },
+    "defeatText": "Ma địch nứt toác, lão mẫu thổ huyết ngã xuống. Vô số oan hồn vất vưởng được ngươi giải thoát!",
+    "loseText": "Âm thanh ma quỷ xé toạc linh đài, tâm thần chấn động suýt nữa nhập ma tẩu hỏa..."
+  },
+  {
+    "id": "li_hoa_thu_vuong",
+    "name": "Ly Hỏa Viêm Thú",
+    "description": "Dị chủng sinh ra từ dung nham núi lửa, toàn thân thiêu đốt hỏa diễm màu đỏ thẫm.",
+    "realm": 11,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 44100,
+      "defense": 28665,
+      "speed": 33075
+    },
+    "rewards": {
+      "tuVi": 45000,
+      "linhThach": 30000,
+      "danhVong": 1200,
+      "specialItems": [
+        "Ly Hỏa Chân Tinh",
+        "Xích Viêm Hộ Tâm Giáp",
+        "Địa Hỏa Linh Tủy"
+      ]
+    },
+    "defeatText": "Viêm thú gầm vang trời đất rồi hóa thành ngọn lửa thuần khiết thu vào túi trữ vật của ngươi!",
+    "loseText": "Hỏa diễm thiêu đốt hộ thể cương khí, ngươi bị bỏng nặng phải dùng phù độn thổ thoát thân..."
+  },
+  {
+    "id": "xich_diem_hoa_ho",
+    "name": "Xích Diễm Ma Hổ",
+    "description": "Hổ yêu tu luyện ngũ bách niên kết thành Kim Đan, tiếng gầm vang vọng làm chấn động sơn hà.",
+    "realm": 13,
+    "difficulty": "medium",
+    "stats": {
+      "power": 43400,
+      "defense": 28210,
+      "speed": 32550
+    },
+    "rewards": {
+      "tuVi": 80000,
+      "linhThach": 50000,
+      "danhVong": 1800,
+      "specialItems": [
+        "Ma Hổ Yêu Đan",
+        "Xích Hổ Nanh Vuốt"
+      ]
+    },
+    "defeatText": "Cự hổ ầm ầm ngã xuống đè gãy cây cối rừng rậm. Một viên yêu đan đỏ rực lăn ra!",
+    "loseText": "Móng vuốt hổ xé toạc linh quang phòng hộ, ngươi thổ huyết lùi bước..."
+  },
+  {
+    "id": "ta_tu_hac_y",
+    "name": "Tà Tu Hắc Y Lão Quỷ",
+    "description": "Tà tu Kim Đan Đỉnh Phong hút linh hồn trăm người luyện pháp bảo tà môn, tay vấy đầy máu tươi.",
+    "realm": 15,
+    "difficulty": "hard",
+    "stats": {
+      "power": 72200,
+      "defense": 46930,
+      "speed": 54150
+    },
+    "rewards": {
+      "tuVi": 180000,
+      "linhThach": 100000,
+      "danhVong": 3000,
+      "specialItems": [
+        "Hắc Ám Tâm Kinh",
+        "Linh Hồn Châu",
+        "Tà Đạo Huyết Kiếm"
+      ]
+    },
+    "defeatText": "\"Không thể nào... Kim Đan của ta...\" Lão quỷ tan thành tro bụi trước uy lực chính đạo!",
+    "loseText": "\"Linh hồn ngươi sẽ là bổ phẩm cho vạn quỷ cắn nuốt!\" Ngươi bị thương nặng bỏ chạy..."
+  },
+  {
+    "id": "lam_hai_giao_long",
+    "name": "Thái Cổ Độc Giác Thanh Giao",
+    "description": "Huyết mạch chân long còn sót lại dưới đáy Bắc Hải, thân dài trăm trượng, hô phong hoán vũ.",
+    "realm": 16,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 103000,
+      "defense": 66950,
+      "speed": 77250
+    },
+    "rewards": {
+      "tuVi": 350000,
+      "linhThach": 200000,
+      "danhVong": 5500,
+      "specialItems": [
+        "Thanh Giao Long Giác",
+        "Giao Long Nghịch Lân",
+        "Bắc Hải Định Thủy Châu"
+      ]
+    },
+    "defeatText": "Giao Long gầm lên kinh thiên rồi phục tùng cúi đầu, dâng lên sừng rồng quý giá ngàn năm!",
+    "loseText": "Sóng thần cuồn cuộn dìm ngập ngươi, may nhờ ngậm tị thủy châu mới trốn thoát lên bờ..."
+  },
+  {
+    "id": "dia_sat_hung_vuong",
+    "name": "Địa Sát Hắc Hùng Vương",
+    "description": "Yêu vương Nguyên Anh hấp thụ địa sát khí ngàn năm, thân thể cứng như huyền kim bất hoại.",
+    "realm": 18,
+    "difficulty": "medium",
+    "stats": {
+      "power": 93900,
+      "defense": 61035,
+      "speed": 70425
+    },
+    "rewards": {
+      "tuVi": 600000,
+      "linhThach": 350000,
+      "danhVong": 7000,
+      "specialItems": [
+        "Địa Sát Thần Tủy",
+        "Hùng Vương Huyền Giáp"
+      ]
+    },
+    "defeatText": "Thân hình hộ pháp của gấu lớn sụp đổ, chấn động đất đai nứt toác. Địa sát linh tinh rơi đầy đất!",
+    "loseText": "Cú tát của nó mang theo trọng lực vạn cân đè bẹp phi kiếm của ngươi..."
+  },
+  {
+    "id": "van_doc_mon_chu",
+    "name": "Vạn Độc Lão Tổ",
+    "description": "Chủ nhân Vạn Độc Môn, luyện xuất Thiên La Hủ Cốt Khí ăn mòn cả Nguyên Anh chân thân.",
+    "realm": 20,
+    "difficulty": "hard",
+    "stats": {
+      "power": 146000,
+      "defense": 94900,
+      "speed": 109500
+    },
+    "rewards": {
+      "tuVi": 1200000,
+      "linhThach": 700000,
+      "danhVong": 12000,
+      "specialItems": [
+        "Vạn Độc Hóa Cốt Đan",
+        "Thiên Tà Độc Trượng",
+        "Bách Độc Bất Xâm Thể Quyết"
+      ]
+    },
+    "defeatText": "Vạn Độc Lão Tổ gào rú trong tuyệt vọng khi độc khí phản phệ tự thiêu rụi bản thân lão!",
+    "loseText": "Khói độc xanh lục xâm lấn kinh mạch, Nguyên Anh của ngươi rung chuyển mờ ảo đành lui..."
+  },
+  {
+    "id": "thai_co_bang_phuong",
+    "name": "Thái Cổ Băng Phượng Tàn Thể",
+    "description": "Thần thú Băng Phượng thượng cổ niết bàn thất bại, hàn khí ngút trời đóng băng vạn dặm.",
+    "realm": 21,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 203000,
+      "defense": 131950,
+      "speed": 152250
+    },
+    "rewards": {
+      "tuVi": 2500000,
+      "linhThach": 1500000,
+      "danhVong": 25000,
+      "specialItems": [
+        "Băng Phượng Tinh Huyết",
+        "Cửu U Hàn Băng Vũ",
+        "Niết Bàn Thần Công Tàn Quyển"
+      ]
+    },
+    "defeatText": "Băng Phượng cất tiếng hót thanh tao vang dội cửu tiêu rồi hóa thành vầng sáng trắng nhập vào ngươi!",
+    "loseText": "Toàn thân đông cứng trong hàn băng ngàn năm, ngươi phải đốt cháy chân nguyên mới phá băng chạy ra..."
+  },
+  {
+    "id": "thien_loi_cu_uong",
+    "name": "Cửu Thiên Kim Sí Đại Bằng",
+    "description": "Thần điểu Hóa Thần cảnh, sải cánh chín vạn dặm, mang theo phong lôi thần uy xé rách hư không.",
+    "realm": 23,
+    "difficulty": "medium",
+    "stats": {
+      "power": 179000,
+      "defense": 116350,
+      "speed": 134250
+    },
+    "rewards": {
+      "tuVi": 5000000,
+      "linhThach": 3000000,
+      "danhVong": 40000,
+      "specialItems": [
+        "Kim Sí Bằng Vũ",
+        "Phong Lôi Độn Pháp Thần Thông"
+      ]
+    },
+    "defeatText": "Đại Bằng gãy cánh rơi xuống tầng mây, lông vũ vàng kim sáng rực cả một góc trời!",
+    "loseText": "Tốc độ của nó quá nhanh vượt ngoài tầm thần thức, ngươi trúng lôi đình hộc máu lui bước..."
+  },
+  {
+    "id": "u_minh_quy_de",
+    "name": "U Minh Quỷ Tôn",
+    "description": "Thống lĩnh mười vạn âm binh Hoàng Tuyền, dùng sinh hồn tu luyện Lục Đạo Ma Nhãn.",
+    "realm": 25,
+    "difficulty": "hard",
+    "stats": {
+      "power": 273000,
+      "defense": 177450,
+      "speed": 204750
+    },
+    "rewards": {
+      "tuVi": 10000000,
+      "linhThach": 6000000,
+      "danhVong": 75000,
+      "specialItems": [
+        "Hoàng Tuyền Minh Kiếm",
+        "U Minh Lệnh Bài",
+        "Cửu U Hồn Châu"
+      ]
+    },
+    "defeatText": "\"Ngươi... dám chống lại ý chỉ Hoàng Tuyền...\" Quỷ Tôn vỡ tan thành bụi đen biến mất!",
+    "loseText": "Vạn quỷ gào thét cắn xé nguyên thần, ngươi may nhờ pháp bảo hộ thể mới giữ được đạo tâm..."
+  },
+  {
+    "id": "thoi_khong_nghiet_long",
+    "name": "Hư Không Thôn Thiên Xà",
+    "description": "Dị thú Hóa Thần Đỉnh Phong bơi lội trong kẽ hở hư không, há miệng nuốt chửng cả ngọn núi lớn.",
+    "realm": 26,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 378000,
+      "defense": 245700,
+      "speed": 283500
+    },
+    "rewards": {
+      "tuVi": 20000000,
+      "linhThach": 12000000,
+      "danhVong": 150000,
+      "specialItems": [
+        "Hư Không Tinh Thạch",
+        "Thôn Thiên Khí Khái",
+        "Thời Không Thần Bào"
+      ]
+    },
+    "defeatText": "Hư Không Xà gục ngã làm không gian sụp đổ, khe nứt hư không hé lộ kho báu tiền nhân!",
+    "loseText": "Lực hút hư không suýt nghiền nát thân thể ngươi, ngươi đành dùng Na Di Phù chạy trốn..."
+  },
+  {
+    "id": "tinh_khong_yeu_chu",
+    "name": "Tinh Không Cự Thú Bát Nhãn",
+    "description": "Yêu thú khổng lồ sống ngoài vực ngoại tinh không, hấp thu ánh sao tinh hà để tu luyện.",
+    "realm": 29,
+    "difficulty": "medium",
+    "stats": {
+      "power": 430000,
+      "defense": 279500,
+      "speed": 322500
+    },
+    "rewards": {
+      "tuVi": 50000000,
+      "linhThach": 30000000,
+      "danhVong": 300000,
+      "specialItems": [
+        "Tinh Thần Cốt Tủy",
+        "Huyền Tinh Sa Lôi"
+      ]
+    },
+    "defeatText": "Cự thú tan biến thành vô số hạt bụi sao sáng lấp lánh rải khắp vũ trụ!",
+    "loseText": "Ánh sáng tinh không bắn nát hộ thân pháp quang, ngươi bị thương nặng phải lui..."
+  },
+  {
+    "id": "van_kiem_dao_chu",
+    "name": "Vạn Kiếm Ma Tôn",
+    "description": "Đại năng Hợp Thể tẩu hỏa nhập ma, vạn thanh ma kiếm xoay quanh người sát phạt vô biên.",
+    "realm": 34,
+    "difficulty": "hard",
+    "stats": {
+      "power": 1920000,
+      "defense": 1248000,
+      "speed": 1440000
+    },
+    "rewards": {
+      "tuVi": 180000000,
+      "linhThach": 100000000,
+      "danhVong": 800000,
+      "specialItems": [
+        "Vạn Kiếm Đồ Lục",
+        "Tru Tiên Kiếm Ý Tàn Quyển",
+        "Kiếm Tôn Pháp Y"
+      ]
+    },
+    "defeatText": "Vạn kiếm gãy vụn, Ma Tôn ánh mắt thanh tỉnh mỉm cười: \"Cảm ơn ngươi đã giải thoát kiếm đạo cho ta...\"",
+    "loseText": "Vô tận kiếm khí xé nát hư không làm ngươi thương tích đầy mình..."
+  },
+  {
+    "id": "bat_hoang_kim_o",
+    "name": "Bát Hoang Tam Túc Kim Ô",
+    "description": "Thái Cổ Thần Điểu Hợp Thể Đại Viên Mãn, mang Thái Dương Chân Hỏa thiêu rụi cả một tinh vực.",
+    "realm": 36,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 4080000,
+      "defense": 2652000,
+      "speed": 3060000
+    },
+    "rewards": {
+      "tuVi": 400000000,
+      "linhThach": 250000000,
+      "danhVong": 2000000,
+      "specialItems": [
+        "Thái Dương Thần Hỏa Chủng",
+        "Kim Ô Vũ Dực",
+        "Mặt Trời Tinh Hạch"
+      ]
+    },
+    "defeatText": "Kim Ô hóa thành một mặt trời rực rỡ thu nhỏ trong lòng bàn tay ngươi. Thiên địa hồi sinh!",
+    "loseText": "Nhiệt độ hàng triệu độ thiêu đốt da thịt, ngươi không thể áp sát đành phải lùi..."
+  },
+  {
+    "id": "cuu_u_minh_xa",
+    "name": "Cửu U Minh Xà Thần",
+    "description": "Xà vương Đại Thừa cảnh trấn thủ ranh giới giữa nhân gian và minh giới.",
+    "realm": 39,
+    "difficulty": "medium",
+    "stats": {
+      "power": 11100000,
+      "defense": 7215000,
+      "speed": 8325000
+    },
+    "rewards": {
+      "tuVi": 1200000000,
+      "linhThach": 800000000,
+      "danhVong": 5000000,
+      "specialItems": [
+        "Minh Giới Thần Ngọc",
+        "U Linh Trượng"
+      ]
+    },
+    "defeatText": "Con rắn khổng lồ chìm vào minh hà, để lại ngọc thạch minh giới tỏa u quang!",
+    "loseText": "Độc tố âm hàn làm chân nguyên ngưng trệ, ngươi phải lui bước dưỡng thương..."
+  },
+  {
+    "id": "cuu_trong_kiep_thu",
+    "name": "Cửu Trọng Kiếp Lôi Hóa Thân",
+    "description": "Thiên kiếp lôi đình tích tụ ngàn năm hóa hình thành thú hoang mang ý chí hủy diệt của Thiên Đạo.",
+    "realm": 45,
+    "difficulty": "hard",
+    "stats": {
+      "power": 162000000,
+      "defense": 105300000,
+      "speed": 121500000
+    },
+    "rewards": {
+      "tuVi": 4000000000,
+      "linhThach": 2500000000,
+      "danhVong": 15000000,
+      "specialItems": [
+        "Cửu Tiêu Kiếp Dịch",
+        "Thiên Phạt Lôi Cốt",
+        "Lôi Thần Trấn Ngục Ấn"
+      ]
+    },
+    "defeatText": "Lôi thú tan rã thành dòng sữa kiếp dịch thuần khiết, rưới mát linh căn giúp ngươi thoát thai hoán cốt!",
+    "loseText": "Tia sét tím xé rách trời xanh giáng thẳng vào đỉnh đầu ngươi, đạo tâm chấn động kịch liệt..."
+  },
+  {
+    "id": "tien_thu_bao_man",
+    "name": "Tiên Thú Bạo Mãn - Ngũ Sắc Kỳ Lân",
+    "description": "Linh thú hộ sơn của Chân Tiên thời cổ, bị ma khí xâm nhập trở nên cuồng bạo bất kham.",
+    "realm": 51,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 2540000000,
+      "defense": 1651000000,
+      "speed": 1905000000
+    },
+    "rewards": {
+      "tuVi": 15000000000,
+      "linhThach": 8000000000,
+      "danhVong": 50000000,
+      "specialItems": [
+        "Kỳ Lân Tinh Huyết",
+        "Ngũ Sắc Thần Thạch",
+        "Cổ Tiên Khế Ước",
+        "Tiên Thú Giáp"
+      ]
+    },
+    "defeatText": "Kỳ Lân ngửa mặt gầm vang, ánh mắt trở lại thanh tịnh: \"Cảm ơn ngươi... ta đã được giải thoát!\"",
+    "loseText": "\"ROOAARRR!!!\" Móng vuốt ngũ sắc đánh vỡ phòng ngự của ngươi..."
+  },
+  {
+    "id": "co_tien_oan_hon",
+    "name": "Cổ Tiên Oan Hồn - Thanh Liên Đạo Nhân",
+    "description": "Vị Chân Tiên ngàn năm trước bị nghịch đồ sát hại, oan hồn giữ lại kiếm đạo tuyệt thế.",
+    "realm": 55,
+    "difficulty": "hard",
+    "stats": {
+      "power": 13800000000,
+      "defense": 8970000000,
+      "speed": 10350000000
+    },
+    "rewards": {
+      "tuVi": 80000000000,
+      "linhThach": 45000000000,
+      "danhVong": 150000000,
+      "specialItems": [
+        "Thanh Liên Kiếm Pháp",
+        "Đạo Nhân Di Vật",
+        "Công Đức Kim Quang"
+      ]
+    },
+    "defeatText": "Oan hồn mỉm cười tan biến: \"Tâm nguyện đã vẹn toàn, kiếm pháp này trao lại cho ngươi...\"",
+    "loseText": "Thanh Liên Kiếm Trận bao vây bốn phía khiến ngươi vết thương chồng chất..."
+  },
+  {
+    "id": "cuu_vi_thien_ho",
+    "name": "Cửu Vĩ Thiên Hồ Yêu Hậu",
+    "description": "Tuyệt thế mỹ nhân tộc yêu, sở hữu mị thuật khuynh đảo chư thiên, chín đuôi lay động cả ngân hà.",
+    "realm": 70,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 14200000000000,
+      "defense": 9230000000000,
+      "speed": 10650000000000
+    },
+    "rewards": {
+      "tuVi": 600000000000,
+      "linhThach": 300000000000,
+      "danhVong": 800000000,
+      "specialItems": [
+        "Cửu Vĩ Linh Hồ Thao",
+        "Mị Hoặc Thần Châu",
+        "Thiên Hồ Huyết Mạch"
+      ]
+    },
+    "defeatText": "Yêu Hậu khẽ thở dài thu hồi đuôi: \"Đạo tâm ngươi vững vàng như sắt đá, bổn cung bái phục!\"",
+    "loseText": "Ánh mắt mê hoặc của nàng làm nguyên thần ngươi chao đảo, không thể xuất chiêu..."
+  },
+  {
+    "id": "kim_tien_kiem_ma",
+    "name": "Vô Ngân Kiếm Ma",
+    "description": "Tửu kiếm tiên đọa ma, kiếm đạo đạt đến cảnh giới vô thanh vô tức chém đứt nhân quả.",
+    "realm": 75,
+    "difficulty": "hard",
+    "stats": {
+      "power": 111000000000000,
+      "defense": 72150000000000,
+      "speed": 83250000000000
+    },
+    "rewards": {
+      "tuVi": 2500000000000,
+      "linhThach": 1200000000000,
+      "danhVong": 3000000000,
+      "specialItems": [
+        "Vô Ngân Tiên Kiếm",
+        "Trảm Quả Kiếm Kinh"
+      ]
+    },
+    "defeatText": "Kiếm Ma buông kiếm cười lớn: \"Trăm vạn năm qua, cuối cùng có người phá được một kiếm này của ta!\"",
+    "loseText": "Một kiếm xé rách không gian, ngươi chưa kịp thấy đường kiếm đã trúng thương lui bước..."
+  },
+  {
+    "id": "yeu_de_huyet_nguyet",
+    "name": "Yêu Đế Huyết Nguyệt",
+    "description": "Đế vương tộc yêu thống lĩnh vạn giới yêu ma, mang huyết mạch viễn cổ cái thế vô song.",
+    "realm": 87,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 45600000000000000,
+      "defense": 29640000000000000,
+      "speed": 34200000000000000
+    },
+    "rewards": {
+      "tuVi": 25000000000000,
+      "linhThach": 10000000000000,
+      "danhVong": 25000000000,
+      "specialItems": [
+        "Yêu Hoàng Huyết Mạch",
+        "Huyết Nguyệt Thần Kiếm",
+        "Đế Vương Ấn"
+      ]
+    },
+    "defeatText": "\"Ta là Yêu Đế... sao có thể bại dưới tay ngươi...\" Đế quốc yêu ma từ đây sụp đổ!",
+    "loseText": "\"Nhân tộc yếu ớt, cam chịu làm nô dịch cho yêu tộc ta đi!\" Ngươi bị đánh rơi xuống cửu u..."
+  },
+  {
+    "id": "thien_ma_chi_vuong",
+    "name": "Thiên Ma Chi Vương - Ma Hoàng Vô Cực",
+    "description": "Chúa tể Ma Giới ngàn đời bất tử, từng đại chiến với chư vị Tiên Đế san bằng vô số giới vực.",
+    "realm": 95,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 1240000000000000000,
+      "defense": 806000000000000000,
+      "speed": 930000000000000000
+    },
+    "rewards": {
+      "tuVi": 200000000000000,
+      "linhThach": 80000000000000,
+      "danhVong": 100000000000,
+      "specialItems": [
+        "Ma Hoàng Chân Nguyên",
+        "Thiên Ma Thần Công",
+        "Vô Cực Ma Kiếm",
+        "Ma Đế Hoàng Tọa"
+      ]
+    },
+    "defeatText": "\"Ngươi... ngươi rốt cuộc là ai... vạn cổ luân hồi sao có thể sinh ra tồn tại như ngươi...\" Ma Hoàng tan biến!",
+    "loseText": "\"Tiên Đế cũng cúi đầu trước ta, sâu kiến như ngươi dám cả gan ngông cuồng!\""
+  },
+  {
+    "id": "de_to_hon_don",
+    "name": "Hỗn Độn Đạo Tổ Chi Linh",
+    "description": "Ý chí sơ khai của thiên địa trước khi khai thiên lập địa, là đỉnh cao tuyệt đối của vạn đạo trường sinh.",
+    "realm": 100,
+    "difficulty": "legendary",
+    "stats": {
+      "power": 12400000000000000000,
+      "defense": 8060000000000000000,
+      "speed": 9300000000000000000
+    },
+    "rewards": {
+      "tuVi": 999999999999999,
+      "linhThach": 500000000000000,
+      "danhVong": 999999999999,
+      "specialItems": [
+        "Hỗn Độn Đạo Quả",
+        "Khai Thiên Thần Phủ",
+        "Trường Sinh Bất Diệt Thể",
+        "Vạn Giới Chí Tôn Lệnh"
+      ]
+    },
+    "defeatText": "Toàn bộ vũ trụ chấn động, tiên hoa nở rộ khắp chư thiên vạn giới. Ngươi đã chứng đạo thành Đạo Tổ Vô Thượng!",
+    "loseText": "Một luồng hỗn đôn khí nhẹ nhàng đánh bay ngươi ra khỏi thiên ngoại thiên..."
+  }
+]

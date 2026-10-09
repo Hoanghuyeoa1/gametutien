@@ -1,26 +1,804 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0d;
+  --foreground: #f3f0e6;
+  --ink-card: rgba(18, 18, 24, 0.85);
+  --bronze-border: rgba(217, 119, 6, 0.25);
+  --jade-accent: #10b981;
+  --tamma-purple: #9333ea;
+  --thienkiep-crimson: #dc2626;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at 50% -10%, #101420 0%, #08090d 50%, #040507 100%);
+  background-attachment: fixed;
+  color: #f1ebd8;
+  font-family: var(--font-sans), "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
+
+.font-serif {
+  font-family: var(--font-serif), "Noto Serif", Georgia, serif !important;
+}
+
+.font-sans {
+  font-family: var(--font-sans), "Be Vietnam Pro", -apple-system, sans-serif !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2830;
+  border-radius: 3px;
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3947;
+}
+
+/* No Scrollbar Utility for smooth pill bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Screen Shake Animation for Tâm Ma & Thiên Kiếp */
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-6px, -4px) rotate(-0.5deg); }
+  20% { transform: translate(6px, 4px) rotate(0.5deg); }
+  30% { transform: translate(-8px, 2px) rotate(-1deg); }
+  40% { transform: translate(7px, -4px) rotate(1deg); }
+  50% { transform: translate(-5px, 5px) rotate(-0.5deg); }
+  60% { transform: translate(5px, -3px) rotate(0.5deg); }
+  70% { transform: translate(-3px, 3px) rotate(-0.2deg); }
+  80% { transform: translate(4px, -2px) rotate(0.2deg); }
+  90% { transform: translate(-2px, 1px) rotate(0deg); }
+}
+
+.shake-screen {
+  animation: screenShake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Kiếp Lôi Flash */
+@keyframes thienkiepFlash {
+  0%, 100% { box-shadow: 0 0 0 rgba(220, 38, 38, 0); }
+  20%, 60% { box-shadow: 0 0 35px rgba(239, 68, 68, 0.8), inset 0 0 25px rgba(220, 38, 38, 0.4); }
+  40%, 80% { box-shadow: 0 0 45px rgba(168, 85, 247, 0.8), inset 0 0 30px rgba(147, 51, 234, 0.5); }
+}
+
+.thienkiep-active {
+  animation: thienkiepFlash 1.2s ease-in-out infinite;
+  border-color: rgba(239, 68, 68, 0.8) !important;
+}
+
+/* Tâm Ma Aura Pulse */
+@keyframes tammaPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(147, 51, 234, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.6), inset 0 0 20px rgba(126, 34, 206, 0.3); }
+}
+
+.tamma-active {
+  animation: tammaPulse 2s ease-in-out infinite;
+  border-color: rgba(168, 85, 247, 0.7) !important;
+}
+
+/* Ink Wash Glass Card - Cổ Phong Thần Vận */
+.cophong-card {
+  background: rgba(18, 19, 25, 0.92);
+  border: 1px solid rgba(180, 83, 9, 0.40); /* border-amber-700/40 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.55), 0 4px 8px -2px rgba(0, 0, 0, 0.35);
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.cophong-card:hover {
+  border-color: rgba(245, 158, 11, 0.50);
+  box-shadow: 0 14px 30px -3px rgba(0, 0, 0, 0.7), 0 0 18px -2px rgba(245, 158, 11, 0.2);
+}
+
+/* Corner Ornaments for Cổ Phong look */
+.cophong-corner::before,
+.cophong-corner::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-color: rgba(245, 158, 11, 0.7);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cophong-corner::before {
+  top: 3px;
+  left: 3px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.cophong-corner::after {
+  bottom: 3px;
+  right: 3px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+/* Independent Column Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(180, 83, 9, 0.35) rgba(13, 13, 18, 0.4);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(13, 13, 18, 0.4);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(180, 83, 9, 0.35);
+  border-radius: 9999px;
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.65);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: rgba(245, 158, 11, 0.85);
+}
+
+/* Realm Aura Glow Animation */
+@keyframes realmAuraPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+.realm-aura-pulse {
+  animation: realmAuraPulse 3.5s ease-in-out infinite;
+}
+
+/* ======================================================== */
+/* COMBAT VISUALS & FLOATING COMBAT TEXT (FCT) ANIMATIONS */
+/* ======================================================== */
+
+/* Sát thương thường bay lơ lửng */
+@keyframes combatFloatUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 10px) scale(0.85);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -10px) scale(1.1);
+  }
+  65% {
+    opacity: 0.95;
+    transform: translate(-50%, -35px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -55px) scale(0.9);
+  }
+}
+
+.animate-combat-float {
+  animation: combatFloatUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Sát thương bạo kích nảy mạnh (Punch-in pop) */
+@keyframes combatCritPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 15px) scale(0.4) rotate(-6deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -12px) scale(1.5) rotate(4deg);
+    filter: drop-shadow(0 0 14px rgba(244, 63, 94, 0.95));
+  }
+  50% {
+    transform: translate(-50%, -24px) scale(1.15) rotate(-2deg);
+  }
+  75% {
+    opacity: 0.95;
+    transform: translate(-50%, -40px) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -65px) scale(0.85);
+  }
+}
+
+.animate-combat-crit {
+  animation: combatCritPop 0.95s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Vệt Kiếm Khí Xé Gió (Sword Slash Visual Beam) */
+@keyframes swordSlash {
+  0% {
+    opacity: 0;
+    transform: translate(-60%, -60%) rotate(-35deg) scaleX(0.1);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-10%, -10%) rotate(-35deg) scaleX(1.1);
+  }
+  65% {
+    opacity: 0.9;
+    transform: translate(25%, 25%) rotate(-35deg) scaleX(1.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(65%, 65%) rotate(-35deg) scaleX(0.8);
+  }
+}
+
+.animate-sword-slash {
+  animation: swordSlash 0.28s ease-out forwards;
+}
+
+/* Tia kiếm khí sắc nhọn */
+.sword-slash-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.95) 20%, rgba(56, 189, 248, 1) 50%, rgba(255, 255, 255, 0.95) 80%, transparent 100%);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.9), 0 0 28px rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+  z-index: 30;
+}
+
+.sword-slash-line.crit {
+  height: 7px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.95) 15%, rgba(251, 191, 36, 1) 40%, rgba(239, 68, 68, 1) 60%, rgba(255, 255, 255, 0.95) 85%, transparent 100%);
+  box-shadow: 0 0 22px rgba(239, 68, 68, 0.95), 0 0 35px rgba(245, 158, 11, 0.9);
+}
+
+/* Rung màn hình nhẹ khi trúng đòn bạo kích (Subtle Screen Shake) */
+@keyframes screenShakeSubtle {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-4px, 2px); }
+  40% { transform: translate(4px, -3px); }
+  60% { transform: translate(-3px, -2px); }
+  80% { transform: translate(2px, 3px); }
+}
+
+.animate-screen-shake-subtle {
+  animation: screenShakeSubtle 0.24s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* ======================================================== */
+/* REALM ANIMATION SYSTEM (ZERO-ASSET PROCEDURAL VISUALS)   */
+/* ======================================================== */
+
+/* 1. Cross-fade & Breakthrough Transition */
+@keyframes realmCrossFade {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.96);
+    filter: brightness(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.animate-realm-crossfade {
+  animation: realmCrossFade 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 2. Dan Tian & Energy Breathing Pulse */
+@keyframes realmDanTianPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+}
+
+.animate-realm-dantian {
+  transform-origin: 100px 158px;
+  animation: realmDanTianPulse 2.8s ease-in-out infinite;
+}
+
+/* 3. Realm 0: Mountain Pine Leaves Sway & Fall */
+@keyframes realmLeafDrift1 {
+  0% {
+    transform: translate(0, -10px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate(14px, 35px) rotate(45deg);
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-10px, 85px) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes realmLeafDrift2 {
+  0% {
+    transform: translate(0, -10px) rotate(30deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  60% {
+    transform: translate(-18px, 45px) rotate(-25deg);
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(12px, 95px) rotate(60deg);
+    opacity: 0;
+  }
+}
+
+.animate-realm-leaf-1 {
+  animation: realmLeafDrift1 5.5s ease-in-out infinite;
+}
+
+.animate-realm-leaf-2 {
+  animation: realmLeafDrift2 6.8s ease-in-out infinite 1.8s;
+}
+
+/* 4. Realm 1 & General: Convergent Mist & Slow Spin */
+@keyframes realmMistSpiral {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(180deg) scale(1.06);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.35;
+  }
+}
+
+.animate-realm-mist-spin {
+  transform-origin: 100px 145px;
+  animation: realmMistSpiral 14s linear infinite;
+}
+
+/* 5. Realm 2: Double Helix Light Ribbons */
+@keyframes realmHelixWave1 {
+  0%, 100% {
+    transform: translateY(0px) scaleX(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-6px) scaleX(1.12);
+    opacity: 0.95;
+  }
+}
+
+@keyframes realmHelixWave2 {
+  0%, 100% {
+    transform: translateY(0px) scaleX(1.12);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translateY(6px) scaleX(1);
+    opacity: 0.6;
+  }
+}
+
+.animate-realm-helix-1 {
+  transform-origin: center;
+  animation: realmHelixWave1 3.2s ease-in-out infinite;
+}
+
+.animate-realm-helix-2 {
+  transform-origin: center;
+  animation: realmHelixWave2 3.2s ease-in-out infinite;
+}
+
+/* 6. Realm 3: Ascending Spirit Motes */
+@keyframes realmMoteAscend {
+  0% {
+    transform: translateY(40px) scale(0.6);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-60px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-realm-mote-1 {
+  animation: realmMoteAscend 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animate-realm-mote-2 {
+  animation: realmMoteAscend 4.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 1s;
+}
+
+.animate-realm-mote-3 {
+  animation: realmMoteAscend 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 1.8s;
+}
+
+/* 7. Realm 4: Bagua Ripple Waves */
+@keyframes realmRippleWave {
+  0% {
+    r: 12;
+    opacity: 0.85;
+    stroke-width: 2.2;
+  }
+  70% {
+    opacity: 0.35;
+    stroke-width: 1.2;
+  }
+  100% {
+    r: 68;
+    opacity: 0;
+    stroke-width: 0.4;
+  }
+}
+
+.animate-realm-ripple-1 {
+  animation: realmRippleWave 3.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.animate-realm-ripple-2 {
+  animation: realmRippleWave 3.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 1.7s;
+}
+
+/* 8. Realm 5: Five Elements Cycling Pulse */
+@keyframes realmVisceraCycle1 {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  20% { opacity: 1; transform: scale(1.35); }
+  40% { opacity: 0.4; transform: scale(0.9); }
+}
+
+@keyframes realmVisceraCycle2 {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  40% { opacity: 1; transform: scale(1.35); }
+  60% { opacity: 0.4; transform: scale(0.9); }
+}
+
+@keyframes realmVisceraCycle3 {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  60% { opacity: 1; transform: scale(1.35); }
+  80% { opacity: 0.4; transform: scale(0.9); }
+}
+
+@keyframes realmVisceraCycle4 {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  80% { opacity: 1; transform: scale(1.35); }
+  100% { opacity: 0.4; transform: scale(0.9); }
+}
+
+@keyframes realmVisceraCycle5 {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  10% { opacity: 1; transform: scale(1.35); }
+  30% { opacity: 0.4; transform: scale(0.9); }
+}
+
+.animate-realm-node-1 { transform-origin: center; animation: realmVisceraCycle1 3.5s ease-in-out infinite; }
+.animate-realm-node-2 { transform-origin: center; animation: realmVisceraCycle2 3.5s ease-in-out infinite; }
+.animate-realm-node-3 { transform-origin: center; animation: realmVisceraCycle3 3.5s ease-in-out infinite; }
+.animate-realm-node-4 { transform-origin: center; animation: realmVisceraCycle4 3.5s ease-in-out infinite; }
+.animate-realm-node-5 { transform-origin: center; animation: realmVisceraCycle5 3.5s ease-in-out infinite; }
+
+/* 9. Realm 6: Third-Eye Divine Consciousness Beacon */
+@keyframes realmThirdEyeFlash {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.45);
+    filter: drop-shadow(0 0 8px #c084fc);
+  }
+}
+
+.animate-realm-third-eye {
+  transform-origin: 100px 92px;
+  animation: realmThirdEyeFlash 2s ease-in-out infinite;
+}
+
+/* 10. Realm 7: Orbiting Flying Swords */
+@keyframes realmSwordOrbit {
+  0% {
+    transform: rotate(0deg) translateX(48px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(48px) rotate(-360deg);
+  }
+}
+
+.animate-realm-sword-orbit-1 {
+  transform-origin: 100px 145px;
+  animation: realmSwordOrbit 6s linear infinite;
+}
+
+.animate-realm-sword-orbit-2 {
+  transform-origin: 100px 145px;
+  animation: realmSwordOrbit 6s linear infinite -2s;
+}
+
+.animate-realm-sword-orbit-3 {
+  transform-origin: 100px 145px;
+  animation: realmSwordOrbit 6s linear infinite -4s;
+}
+
+/* 11. Realm 8: High-Speed Qi Vortex */
+@keyframes realmVortexSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-realm-vortex-fast {
+  transform-origin: 100px 145px;
+  animation: realmVortexSpin 3.2s linear infinite;
+}
+
+.animate-realm-vortex-reverse {
+  transform-origin: 100px 145px;
+  animation: realmVortexSpin 4.8s linear infinite reverse;
+}
+
+/* 12. Realm 9: Grand Taiji Yin-Yang Halo */
+@keyframes realmTaijiSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-realm-taiji {
+  transform-origin: 100px 125px;
+  animation: realmTaijiSpin 18s linear infinite;
+}
+
+/* Floating Condensed Liquid Drops */
+@keyframes realmLiquidDrop {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-5px) scale(1.15);
+    opacity: 1;
+    filter: drop-shadow(0 0 5px #fbbf24);
+  }
+}
+
+.animate-realm-liquid {
+  animation: realmLiquidDrop 2.4s ease-in-out infinite;
+}
+
+/* ======================================================== */
+/* 13. TRÚC CƠ: BÁT GIÁC ĐẠO ĐÀI & LINH DỊCH HÓA HẢI        */
+/* ======================================================== */
+@keyframes realm-daotai-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-realm-daotai-spin {
+  transform-origin: 100px 195px;
+  animation: realm-daotai-spin 20s linear infinite;
+}
+
+@keyframes realm-liquid-rise {
+  0% {
+    transform: translateY(14px) scale(0.7);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.2);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px #34d399);
+  }
+  100% {
+    transform: translateY(-28px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+.animate-realm-liquid-rise-1 {
+  animation: realm-liquid-rise 3.2s ease-in-out infinite;
+}
+
+.animate-realm-liquid-rise-2 {
+  animation: realm-liquid-rise 3.6s ease-in-out infinite 1.2s;
+}
+
+.animate-realm-liquid-rise-3 {
+  animation: realm-liquid-rise 2.8s ease-in-out infinite 0.6s;
+}
+
+/* ======================================================== */
+/* 14. KIM ĐAN: KIM ĐAN XÁ LỢI, CỬU CHUYỂN ĐAN VĂN & ĐAN HỎA */
+/* ======================================================== */
+@keyframes realm-jindan-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px #f59e0b) drop-shadow(0 0 16px #ef4444);
+  }
+  50% {
+    transform: scale(1.22);
+    filter: drop-shadow(0 0 18px #fbbf24) drop-shadow(0 0 32px #f97316);
+  }
+}
+
+.animate-realm-jindan-pulse {
+  transform-origin: 100px 158px;
+  animation: realm-jindan-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes realm-glyph-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-realm-glyph-rotate {
+  transform-origin: 100px 158px;
+  animation: realm-glyph-rotate 14s linear infinite;
+}
+
+.animate-realm-glyph-rotate-reverse {
+  transform-origin: 100px 158px;
+  animation: realm-glyph-rotate 18s linear infinite reverse;
+}
+
+@keyframes realmFlameWave {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+.animate-realm-flame-wave {
+  transform-origin: 100px 155px;
+  animation: realmFlameWave 3s ease-in-out infinite;
+}
+
+/* ======================================================== */
+/* 15. NGUYÊN ANH: HÀI ĐỒNG XUẤT KHIẾU, TỬ KHÍ & THẦN NIỆM */
+/* ======================================================== */
+@keyframes realm-nascent-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 0 8px #a855f7) drop-shadow(0 0 18px #38bdf8);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.06);
+    filter: drop-shadow(0 0 16px #c084fc) drop-shadow(0 0 28px #818cf8);
+  }
+}
+
+.animate-realm-nascent-float {
+  transform-origin: 100px 118px;
+  animation: realm-nascent-float 4s ease-in-out infinite;
+}
+
+@keyframes realmNebulaSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.08); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.animate-realm-nebula-spin {
+  transform-origin: 100px 120px;
+  animation: realmNebulaSpin 26s linear infinite;
+}
+
+/* ======================================================== */
+/* 16. HÓA THẦN: CỰ THẦN PHÁP TƯỚNG & VẾT RÁCH HƯ KHÔNG     */
+/* ======================================================== */
+@keyframes realm-phap-tuong-aura {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03) translateY(-3px);
+  }
+}
+
+.animate-realm-phap-tuong-aura {
+  transform-origin: 100px 65px;
+  animation: realm-phap-tuong-aura 5s ease-in-out infinite;
+}
+
+@keyframes realm-void-lightning {
+  0%, 86%, 94%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  88%, 92% {
+    opacity: 0.95;
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 10px #f43f5e) drop-shadow(0 0 20px #e11d48);
+  }
+  89% {
+    opacity: 0.3;
+  }
+  91% {
+    opacity: 1;
+    filter: drop-shadow(0 0 14px #a855f7);
+  }
+}
+
+.animate-realm-void-lightning {
+  animation: realm-void-lightning 4.5s ease-in-out infinite;
+}
+
+@keyframes realmDomainSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.animate-realm-domain-spin {
+  transform-origin: 100px 125px;
+  animation: realmDomainSpin 16s linear infinite;
+}
+
+
+
